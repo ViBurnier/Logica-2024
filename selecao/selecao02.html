@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" name="prova1" id="prova1" placeholder="Nota da prova 1">
+    <input type="number" name="prova2" id="prova2" placeholder="Nota da prova 2">
+    <input type="number" name="optativa" id="optativa" placeholder="Prova optativa">
+
+    <input type="button" value="enviar" onclick="enviar()">
+
+    <script>
+        /*screva um programa que leia as notas das duas avaliações normais e a nota da avaliação optativa. 
+        Caso o aluno não tenha feito a optativa deve ser fornecido o valor -1. Calcular a média do semestre considerando que a prova optativa substitui a nota mais baixa entre as duas primeiras avaliações. Escrever a média e mensagens que indiquem se o aluno foi aprovado, reprovado ou está em exame, de acordo com as informações abaixo:  */
+
+        //entrada
+        let prova1 = document.querySelector("input#prova1")
+        let prova2 = document.querySelector("input#prova2")
+        let optativa = document.querySelector("input#optativa")
+
+        function enviar(){
+            let p1 = Number(prova1.value)
+            let p2 = Number(prova2.value)
+            let o  = Number(optativa.value)
+            
+            //processamento
+            if(o == 0){
+                o = -1
+            }
+            else{
+                let media = (p1 + p2 + o) / 3
+
+                if(media >= 6){
+                    document.write("Aprovado")
+                }
+                else if(media < 3){
+                    document.write("Reprovado")
+                }
+                else{
+                    document.write("Em exame")
+                }
+            }
+
+
+
+        }
+
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" name="codigo" id="codigo">
+    <input type="button" value="enviar" onclick="enviar()">
+
+    <script>
+
+        let codigo = document.querySelector("input#codigo")
+
+        function enviar(){
+            let num = Number(codigo.value)
+            
+
+            switch(num){
+                case 1: 
+                document.write("sul") 
+                break;
+
+                case 2: 
+                document.write("norte")
+                break;
+
+                case 3: 
+                document.write("leste")
+                break;
+
+                case 4: 
+                document.write("norte")
+                break;
+
+                case 10: 
+                document.write("Centro-Oeste")
+                break;
+                
+                case 11: 
+                document.write("Noroeste")
+                break;
+
+                default:
+                    if ( num == 5 || num == 6){
+                    document.write("nordeste")
+                    }
+                    else if ( num == 7 || num == 8 || num == 9){
+                    document.write("sudeste")
+                    }
+                    else{
+                        document.write("Importado")
+                    }
+            }
+
+         }   
+         
+         /*
+            if(num == 1){
+                document.write("sul")
+            }
+            else if ( num == 2){
+                document.write("norte")
+            }
+            else if ( num == 3){
+                document.write("leste")
+            }
+            else if ( num == 4){
+                document.write("norte")
+            }
+            else if ( num == 5 || num == 6){
+                document.write("nordeste")
+            }
+            else if ( num == 7 || num == 8 || num == 9){
+                document.write("sudeste")
+            }
+            else if (num == 10){
+                document.write("Centro-Oeste")
+            }
+            else if (num == 11){
+                document.write("Noroeste")
+            }
+            else{
+                document.write("Importado")
+            } */
+
+
+            
+        
+
+    </script>
+</body>
+</html>

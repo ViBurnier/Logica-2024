@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="number" name="prova1" id="prova1" placeholder="Nota da prova 1">
+    <input type="number" name="prova2" id="prova2" placeholder="Nota da prova 2">
+
+    <input type="button" value="enviar" onclick="enviar()">
+
+    <script>
+        /*Escreva um programa para ler as notas das duas avaliações de um aluno no semestre, calcular e 
+        escrever a média semestral e a seguinte mensagem: PARABÉNS! Você foi aprovado! somente se o aluno foi aprovado (considere 6.0 a média mínima para aprovação). */
+
+         //entrada
+        let prova1 = document.querySelector("input#prova1")
+        let prova2 = document.querySelector("input#prova2")
+
+        function enviar(){
+            let p1 = Number(prova1.value)
+            let p2 = Number(prova2.value)
+
+            //processamento
+            let media = (p1 + p2) / 2
+            
+            if(media >= 6){
+                document.write("PARABÉNS! Você foi aprovado!")
+            }
+            else{
+                document.write("Você foi REPROVADO! Estude mais...")
+            }
+
+        }
+    </script>
+</body>
+</html>

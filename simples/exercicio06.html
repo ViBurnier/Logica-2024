@@ -1,0 +1,28 @@
+<script>
+    //Um motorista de táxi deseja calcular o rendimento de seu carro na praça. Sabendo-se que o preço do combustível é de R$ 4,87, escreva um programa para ler: a marcação do odômetro (Km) no início do dia, a marcação (Km) no final do dia, o número de litros de combustível gasto e o valor total (R$) recebido dos passageiros. Calcular e escrever: a média do consumo em Km/L e o lucro (líquido) do dia. 
+    
+    
+//inicio 
+
+let inicio = prompt("marcação do odômetro (Km) no início do dia: ")
+let final = prompt("marcação do odômetro (Km) no final do dia: ")
+let combGasto = prompt("gasolina gasta em Litros: ")
+let valorDia = prompt("valor total recebido: ")
+
+//calculo 
+// (((final - inicio) / combGasto) * 4,87) - lucroDia 
+
+let lucroLqd = valorDia - (((final - inicio) / combGasto) * 4,87) 
+
+let kmPl = (final - inicio) / combGasto
+
+//saida
+
+document.write(`lucro: ${lucroLqd}`)
+
+document.write(`consumo: ${kmPl}`)
+
+console.log(`lucro: ${lucroLqd} ; consumo: ${kmPl}`)
+
+
+</script>

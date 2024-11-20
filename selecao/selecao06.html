@@ -1,0 +1,22 @@
+<script>
+    //Reescreva o programa do exercício anterior considerando o zero como neutro, ou seja, se for digitado o valor zero, escrever a palavra zero. 
+    
+    //entrada 
+    let valor = parseFloat(prompt())
+    
+    //processamento
+    let res = ""
+    
+    if (valor == 0){
+        res = "ZERO"
+    }
+    else if (valor > 0){
+        res = "positivo"
+    }
+    else{
+        res = "negativo"
+    }
+    
+    //saida
+    document.write(res)
+</script>
