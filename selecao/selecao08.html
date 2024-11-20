@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" name="anoNascimento" id="anoNascimento" placeholder="Ano de nascimento">
+
+    <input type="button" value="enviar" onclick="enviar()">
+
+    <script>
+        /*
+        Escreva um programa para ler o ano de nascimento de uma pessoa e escrever uma mensagem que 
+        diga se ela poderá ou não votar este ano (não é necessário considerar o mês em que ela nasceu). 
+        */
+
+        let anoNascimento = document.querySelector("input#anoNascimento");
+        let anoAtual = new Date().getFullYear();
+
+        function enviar() {
+            let ano = Number(anoNascimento.value);
+            let idade = anoAtual - ano;
+
+            if(idade < 16){
+                document.write("Você não pode votar este ano!");
+            } else{
+                document.write("Você pode votar este ano!");
+            }
+        }
+
+    </script>
+</body>
+</html>
