@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="number" name="macas" id="macas">
+    <input type="button" value="enviar" onclick="enviar()">
+    <script>
+
+        /*As maçãs custam R$ 0,30 cada se forem compradas menos do que uma dúzia, e R$ 0,25 se forem 
+        compradas pelo menos doze. Escreva um programa que leia o número de maçãs compradas, calcule e escreva o valor total da compra.
+        */
+
+        let qtdMaca = document.querySelector("input#macas")
+
+        function enviar() {
+            let qtd = Number(qtdMaca.value)
+            let valorTotal = 0
+            
+            if(qtd <= 12){
+                valorTotal = qtd * 0.30
+            }
+            else{
+                valorTotal = qtd * 0.25
+            }
+
+            document.write("Valor total das macas e: " + valorTotal)
+        }
+        
+    </script>
+</body>
+</html>
