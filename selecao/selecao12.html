@@ -8,7 +8,7 @@
 <body>
     <input type="number" name="altura" id="altura" placeholder="altura em cm">
     <input type="number" name="sexo" id="sexo" placeholder="sexo">
-    <p><h1>!1 PARA MASCULINO E 2 PARA FEMININO!</h1></p>
+    <p><h2>!1 PARA MASCULINO E 2 PARA FEMININO!</h2></p>
 
     <input type="button" value="enviar" onclick="enviar()">
     <script>
@@ -19,7 +19,6 @@
         - para homens : (72.7 * h) – 58 
         - para mulheres : (62.1 * h) – 44.7 
         Observação: Altura = h (na fórmula acima). 
-
         */
 
         //entrada
@@ -35,6 +34,7 @@
                 alert("dados inválidos!")
             }
             else if(gen == 1 && alt != 0){
+                //resolvi colocar em cm para facilitar a vida do usuario=)
                 let pesoIdeal = (72.7 * (alt/100) ) - 58
                 
                 document.write(`seu peso ideal e: ${pesoIdeal}`)
