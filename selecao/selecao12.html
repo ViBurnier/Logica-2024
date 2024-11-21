@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" name="altura" id="altura" placeholder="altura em cm">
+    <input type="number" name="sexo" id="sexo" placeholder="sexo">
+    <p><h2>!1 PARA MASCULINO E 2 PARA FEMININO!</h2></p>
+
+    <input type="button" value="enviar" onclick="enviar()">
+    <script>
+
+        /*
+        Tendo como entrada a altura e o sexo (codificado da seguinte forma: 1:feminino 2:masculino) de 
+        uma pessoa, construa um programa que calcule e imprima seu peso ideal, utilizando as seguintes fórmulas: 
+        - para homens : (72.7 * h) – 58 
+        - para mulheres : (62.1 * h) – 44.7 
+        Observação: Altura = h (na fórmula acima). 
+        */
+
+        //entrada
+        let altura = document.querySelector('input#altura');
+        let sexo = document.querySelector('input#sexo');
+
+        function enviar() {
+            let alt = Number(altura.value);
+            let gen = Number(sexo.value);
+            
+            // processamento e final
+            if(gen == 0 && alt == 0){
+                alert("dados inválidos!")
+            }
+            else if(gen == 1 && alt != 0){
+                //resolvi colocar em cm para facilitar a vida do usuario=)
+                let pesoIdeal = (72.7 * (alt/100) ) - 58
+                
+                document.write(`seu peso ideal e: ${pesoIdeal}`)
+                
+            }
+            else{
+                let pesoIdeal = (62.1 * (alt/100) ) - 44.7
+                
+                document.write(`seu peso ideal e: ${pesoIdeal}`)
+            }
+
+
+          
+
+        }
+        
+
+    </script>
+</body>
+</html>

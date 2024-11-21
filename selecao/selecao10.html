@@ -30,13 +30,19 @@
             let n3 = Number(num3.value)
             
             // processamento
+
+            //teste com array, talvez nao seja o melhor formato mas e o mais compacto
+
             //teste com array, talvez nao seja o melhor formato mas e o mais compacto
             //esqueci que nao pode valores iguais, tenho que refazer essa merda BOAAA
+
             if(n1 > n2) [n1, n2] = [n2, n1]
             if(n2 > n3) [n2, n3] = [n3, n2]
             if(n1 > n2) [n1, n2] = [n2, n1]
 
+            //saida
             console.log("Números em ordem crescente:", n1, n2, n3);
+            
 
         }
 
