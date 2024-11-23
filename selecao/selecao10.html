@@ -1,51 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
+    <input type="number" name="num1" id="num1" />
+    <input type="number" name="num2" id="num2" />
+    <input type="number" name="num3" id="num3" />
 
-    <input type="number" name="num1" id="num1">
-    <input type="number" name="num2" id="num2">
-    <input type="number" name="num3" id="num3">
+    <input type="button" value="enviar" onclick="enviar()" />
 
-    <input type="button" value="enviar" onclick="enviar()">
     <script>
+      /*
+      Escreva um programa para ler 3 valores inteiros (considere que não serão lidos valores iguais) e
+      escrevê-los em ordem crescente.
+      */
+
+      //entrada
+      let num1 = document.querySelector("#num1");
+      let num2 = document.querySelector("#num2");
+      let num3 = document.querySelector("#num3");
+
+      function enviar() {
+        let n1 = Number(num1.value);
+        let n2 = Number(num2.value);
+        let n3 = Number(num3.value);
+
+        // processamento
+
+        //teste com array, talvez nao seja o melhor formato mas e o mais compacto
 
         /*
-        Escreva um programa para ler 3 valores inteiros (considere que não serão lidos valores iguais) e 
-        escrevê-los em ordem crescente.
-        */
+        let vazio = 0;
 
-            //entrada
-        let num1 = document.querySelector("#num1")
-        let num2 = document.querySelector("#num2")
-        let num3 = document.querySelector("#num3")
+        if (n3 > n1) {
+          vazio = n1;
+          n1 = n3;
+          n3 = vazio;
+        }
+        if (n2 > n3) {
+          vazio = n3;
+          n3 = n2;
+          n2 = vazio;
+        }
+        if (n1 > n2) {
+          vazio = n2;
+          n2 = n1;
+          n1 = vazio;
+        }*/
 
-        function enviar() {
-            let n1 = Number(num1.value)
-            let n2 = Number(num2.value)
-            let n3 = Number(num3.value)
-            
-            // processamento
-
-            //teste com array, talvez nao seja o melhor formato mas e o mais compacto
-
-            //teste com array, talvez nao seja o melhor formato mas e o mais compacto
-            //esqueci que nao pode valores iguais, tenho que refazer essa merda BOAAA
-
-            if(n1 > n2) [n1, n2] = [n2, n1]
-            if(n2 > n3) [n2, n3] = [n3, n2]
-            if(n1 > n2) [n1, n2] = [n2, n1]
-
-            //saida
-            console.log("Números em ordem crescente:", n1, n2, n3);
-            
-
+        if (n1 == n2 || n1 == n3 || n2 == n3) {
+          alert("não é possível ter valores iguais");
+        } else {
+          if (n1 > n2) [n1, n2] = [n2, n1];
+          if (n2 > n3) [n2, n3] = [n3, n2];
+          if (n1 > n2) [n1, n2] = [n2, n1];
         }
 
+        //saida
+        console.log("Números em ordem crescente:" + n1 + ", " + n2 + ", " + n3);
+        document.write(
+          "Números em ordem crescente:" + n1 + ", " + n2 + ", " + n3
+        );
+
+        document.write(
+          "Números em ordem crescente:" + n1 + ", " + n2 + ", " + n3
+        );
+      }
     </script>
-</body>
+  </body>
 </html>
