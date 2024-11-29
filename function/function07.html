@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //Refaça o desenvolvimento das questões 4 utilizando funcao
+
+        //Cálculo da média semestral e do resultado final Instrução: Melhore o programa anterior para que, além de exibir a mensagem de aprovação, ele também exibe uma mensagem de falha se a média for menor que 6,0.
+        
+        //entrada
+        let n1 = prompt("NOTA 1")
+        let n2 = prompt("NOTA 2")
+        let msg = ""
+
+        //processo
+        function calcularMedia(nota1, nota2) {
+            let media = (parseFloat(nota1) + parseFloat(nota2)) / 2
+
+            return media 
+        }
+        
+        function exibirMsg(resultado){
+            
+            if (resultado >= 6) {
+                msg = "Parabéns! Você foi aprovado!"
+            } else {
+                msg = "Você não foi aprovado!"
+            }
+            
+            return msg
+        }
+        //saida
+        let media = calcularMedia(n1, n2)
+        
+        document.write(exibirMsg(media))
+
+    </script>
+</body>
+</html>
