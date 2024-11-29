@@ -1,0 +1,20 @@
+<script>
+//Escreva um algoritmo em pseudocodigo para ler 15 valores do tipo “Literal” e guardá-los em um vetor. Após a leitura dos 10 valores, mostrar todos os valores.
+
+//entrada
+
+let listPalavras = []
+
+for(let i = 1; i <= 15; i++){
+    
+    let palavra = prompt("digite uma palavra")
+    listPalavras[i-1] = palavra
+
+    if(i >= 10){
+        document.write(`${listPalavras} <br>`)
+        console.log(listPalavras)
+
+    }
+}
+
+</script>
