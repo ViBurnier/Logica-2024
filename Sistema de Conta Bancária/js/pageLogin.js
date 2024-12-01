@@ -13,17 +13,19 @@
   }
   
 function start(){
-    ticketUser(loginUser())
-}
-
-function loginUser(){
   //entrada
   let user = document.querySelector("input#User").value;
-  let password = Number(document.querySelector("input#Senha").value);
+  let password = parseInt(document.querySelector("input#Senha").value);
+    ticketUser(loginUser(user, password))
     
+}
 
-  let retornoInfoConta = contasUser(verificacaoContaUser(user, password))
+
+function loginUser(user, password){
+  let retornoInfoConta = contasUser(verificacaoContaUser(user, password)) 
   
+  mensagem(user, password, retornoInfoConta)
+
   return retornoInfoConta.chave
 }
 
@@ -40,7 +42,6 @@ function verificacaoContaUser(usuario, senha){
       return 1
     }
     else{
-      mensagem(undefined, undefined, undefined)
       return -1
     }
   }
@@ -59,15 +60,15 @@ function contasUser(valor){
 function mensagem(usuario, senha, contaReturn){
 
   if(usuario == 0 || senha == 0){
-    alert("Preencha todos os campos necessarios")
+    return document.write("Preencha todos os campos necessarios")
   }
 
-  if(contaReturn === undefined || contaReturn === -1){
-    alert("nome ou senha errados ")
+  if(contaReturn == undefined || contaReturn == -1){
+    return document.write("nome ou senha errados ")
   }
 
-  if(contaReturn != undefined ){
-    alert(`Bem vindo ${contaReturn.nome}`)
+  if(contaReturn != undefined){
+    return alert(`Bem vindo ${contaReturn.nome}`)
   }
 
 }
@@ -79,12 +80,12 @@ function ticketUser(chave){
   switch(chave){
 
     case 111:
-      let paginaUser1 = window.location.href = "paginas/paginaUser1.html"
+      let paginaUser1 = window.location.href = "paginaUser1.html"
       return paginaUser1
     break;
 
     case 222:
-      let paginaUser2 = window.location.href = "paginas/paginaUser2.html"
+      let paginaUser2 = window.location.href = "paginaUser2.html"
       return paginaUser2
     break;
 
@@ -93,7 +94,7 @@ function ticketUser(chave){
     break;
 
     default:
-      alert("ERRO")
+      alert('erro')
   }
 
 

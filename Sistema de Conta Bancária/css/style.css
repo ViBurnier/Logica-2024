@@ -1,0 +1,25 @@
+.top{
+    
+    display: flex;
+    justify-content: space-between;
+    width: 600px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid rgba(0, 0, 0, 0.658);
+
+    font: 16px  "Helvetica Neue", "Helvetica";
+}
+
+.body{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    width: 600px;
+}
+
+.btnBody{
+    height: 50px;
+    border-radius: 10px;
+    border: 2px solid black;
+    font: 16px  "Helvetica Neue", "Helvetica";
+}
