@@ -14,16 +14,17 @@
   
 function start(){
     ticketUser(loginUser())
+    
 }
 
 function loginUser(){
   //entrada
   let user = document.querySelector("input#User").value;
-  let password = Number(document.querySelector("input#Senha").value);
+  let password = parseInt(document.querySelector("input#Senha").value);
     
 
   let retornoInfoConta = contasUser(verificacaoContaUser(user, password))
-  
+  mensagem(user, password, retornoInfoConta)
   return retornoInfoConta.chave
 }
 
@@ -59,11 +60,11 @@ function contasUser(valor){
 function mensagem(usuario, senha, contaReturn){
 
   if(usuario == 0 || senha == 0){
-    alert("Preencha todos os campos necessarios")
+    document.write("Preencha todos os campos necessarios")
   }
 
-  if(contaReturn === undefined || contaReturn === -1){
-    alert("nome ou senha errados ")
+  if(contaReturn === undefined && usuario > 1){
+    document.write("nome ou senha errados ")
   }
 
   if(contaReturn != undefined ){
