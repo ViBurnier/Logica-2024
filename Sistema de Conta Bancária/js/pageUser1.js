@@ -1,8 +1,4 @@
 
-let conta = {
-    saldoConta: 0,
-    tipo: "corrente", // "corrente" ou "poupança"
-}
 
 //INICIO DEPOSITO
 function depositar(){
@@ -30,22 +26,31 @@ function sacar(){
 }
 //FIM SACAR
 
+//INICIO EXIBIR DADOS
+function exibirDados(){
+     
+}
+
+//FINAL EXIBIR DADOS
+
+
 //processo
 function retornoSaldoAtualizado(valor, chave){
     switch(chave){
         case 1:
-            return conta.saldoConta = conta.saldoConta + valor
+            return conta1.saldoConta = conta1.saldoConta + valor
         break;
 
         case 2:
-            if(valor > conta.saldoConta){
+            if(valor > conta1.saldoConta){
                 alert("Saldo insuficiente")
-                return conta.saldoConta = conta.saldoConta
+                return conta1.saldoConta = conta1.saldoConta
             }
             else{
-            return conta.saldoConta = conta.saldoConta - valor
+            return conta1.saldoConta = conta1.saldoConta - valor
             }
         break;
+
     }
 
 

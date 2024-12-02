@@ -3,7 +3,9 @@
   let conta1 = {
     nome: "Vitor",
     senha: 1234,
-    chave: 111
+    chave: 111,
+    saldoConta: 0,
+    tipo: "corrente", // "corrente" ou "poupança",
   }
 
   let conta2 = {
