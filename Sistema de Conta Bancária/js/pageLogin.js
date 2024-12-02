@@ -89,10 +89,6 @@ function ticketUser(chave){
       return paginaUser2
     break;
 
-    case false:
-      document.write(chave[1])
-    break;
-
     default:
       alert('erro')
   }
