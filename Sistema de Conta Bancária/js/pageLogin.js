@@ -12,15 +12,19 @@
     nome: "Luis",
     senha: 1212,
     chave: 222,
+    saldoConta: 0,
+    tipo: "corrente", // "corrente" ou "poupança",
   }
-  
-function start(){
-  //entrada
-  let user = document.querySelector("input#User").value;
-  let password = parseInt(document.querySelector("input#Senha").value);
-    ticketUser(loginUser(user, password))
-    
-}
+
+  let btnStart = document.querySelector("input#botaoStart")
+
+  btnStart.addEventListener("click", () => {
+    //entrada
+    let user = document.querySelector("input#User").value;
+    let password = parseInt(document.querySelector("input#Senha").value);
+      ticketUser(loginUser(user, password))
+      
+  })
 
 
 function loginUser(user, password){
@@ -43,9 +47,6 @@ function verificacaoContaUser(usuario, senha){
     if(usuario == conta2.nome && senha == conta2.senha){
       return 1
     }
-    else{
-      return -1
-    }
   }
 
   //retorna informacoes da conta 
@@ -65,7 +66,7 @@ function mensagem(usuario, senha, contaReturn){
     return document.write("Preencha todos os campos necessarios")
   }
 
-  if(contaReturn == undefined || contaReturn == -1){
+  if(contaReturn == undefined){
     return document.write("nome ou senha errados ")
   }
 
