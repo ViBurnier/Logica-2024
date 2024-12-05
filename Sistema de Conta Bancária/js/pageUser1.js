@@ -22,15 +22,44 @@ function sacar(){
 //saida
     exibirSaldo.innerHTML = `Saldo: ${saldoAtualizadoSacar}`
     return saldoAtualizadoSacar
-
 }
 //FIM SACAR
 
 //INICIO EXIBIR DADOS
+
+let cliques = 0
+
 function exibirDados(){
-     
+    
+            entradaDados = {
+            nome: document.querySelector("p.nomeFooter"),
+            saldo: document.querySelector("p.saldoFooter"),
+            senha: document.querySelector("p.senhaFooter"),
+            tipoConta: document.querySelector("p.tipoConta"),
+            }
+
+            if(cliques == 0 ){
+                     entradaDados.nome.innerHTML = `Nome: ${conta1.nome}.`,
+                     entradaDados.saldo.innerHTML = `Saldo: ${conta1.saldoConta}`,
+                     entradaDados.senha.innerHTML = `Senha: ${conta1.senha}`,
+                     entradaDados.tipoConta.innerHTML = `Tipo da conta: ${conta1.tipo}.`,
+
+                cliques = 1
+            }
+
+            else{
+                     entradaDados.nome.innerHTML = "",
+                     entradaDados.saldo.innerHTML = "",
+                     entradaDados.senha.innerHTML = "",
+                     entradaDados.tipoConta.innerHTML = "",
+
+                cliques = 0
+            }
 }
 
+let botao = document.querySelector("input.btnBody");
+botao.addEventListener("click", exibirDados);
+            
 //FINAL EXIBIR DADOS
 
 
@@ -52,6 +81,5 @@ function retornoSaldoAtualizado(valor, chave){
         break;
 
     }
-
 
 }

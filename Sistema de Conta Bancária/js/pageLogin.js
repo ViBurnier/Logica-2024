@@ -47,6 +47,11 @@ function verificacaoContaUser(usuario, senha){
     if(usuario == conta2.nome && senha == conta2.senha){
       return 1
     }
+
+    else{
+      return -1
+    }
+    
   }
 
   //retorna informacoes da conta 
@@ -60,14 +65,15 @@ function contasUser(valor){
 
 
   //fazer mensagem da validacao das contas(1 e 2) para usuario
-function mensagem(usuario, senha, contaReturn){
+  function mensagem(usuario, senha, contaReturn){
+    let msgErro = document.querySelector("p.mensagem")
 
-  if(usuario == 0 || senha == 0){
-    return document.write("Preencha todos os campos necessarios")
+  if(usuario == 0 || senha == 0 ){
+    return msgErro.innerHTML =("Preencha todos os campos necessarios")
   }
 
-  if(contaReturn == undefined){
-    return document.write("nome ou senha errados ")
+  if(contaReturn == undefined ){
+    return msgErro.innerHTML =("nome ou senha errados ")
   }
 
   if(contaReturn != undefined){
@@ -78,6 +84,8 @@ function mensagem(usuario, senha, contaReturn){
 
 
   //segunda verificacao
+  
+
 function ticketUser(chave){
   
   switch(chave){

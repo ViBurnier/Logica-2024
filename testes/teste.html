@@ -1,62 +1,35 @@
-<script>
-  //entrada
-    let conta1 = {
-    nome: "Vitor",
-    senha: 1234,
-    chave: 111
-  }
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alternar Visibilidade</title>
+    <style>
+        #minhaDiv {
+            display: none; /* A div começa oculta */
+            padding: 10px;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <button id="meuBotao">Mostrar/Esconder Texto</button>
+    <div id="minhaDiv">Este é o texto que aparece e some.</div>
 
-  let conta2 = {
-      nome: "Luis",
-      senha: 1212,
-      chave: 222
-    }
-    
-    let user = "Vitor"
-    let password = 1234
+    <script>
+        const botao = document.getElementById('meuBotao');
+        const div = document.getElementById('minhaDiv');
 
-    verificacaoContaUser(user, password)
-    mensagem(user, password, contasUser(verificacaoContaUser()))
+        function alternarVisibilidade() {
+            if (div.style.display === 'none' || div.style.display === '') {
+                div.style.display = 'block'; // Mostra a div
+            } else {
+                div.style.display = 'none'; // Esconde a div
+            }
+        }
 
-  //processos
-  //retorna informacoes da conta 
-function contasUser(valor){
-  //aqui retorna a conta baseada no indice
-    return arrayUser[valor]
-  }
-  
-
-  //retorna um valor para saber a conta 
-function verificacaoContaUser(usuario, senha){
-    if(usuario == conta1.nome && senha == conta1.senha){
-      return 0
-    }
-    
-    if(usuario == conta2.nome && senha == conta2.senha){
-      return 1
-    }
-    else{
-      mensagem(undefined, undefined, undefined)
-      return -1
-    }
-  }
- 
-//fazer mensagem da validacao das contas(1 e 2) para usuario
-function mensagem(usuario, senha, contaReturn){
-
-  if(usuario == 0 || senha == 0){
-    alert("Preencha todos os campos necessarios")
-  }
-
-  if(contaReturn === undefined || contaReturn === -1){
-    alert("nome ou senha errados ")
-  }
-
-  if(contaReturn != undefined ){
-    alert(`Bem vindo ${contaReturn.nome}`)
-  }
-
-}
-
-
-</script>
+        botao.addEventListener('click', alternarVisibilidade);
+    </script>
+</body>
+</html>
