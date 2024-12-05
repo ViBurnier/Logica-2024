@@ -1,25 +1,117 @@
+.boxPai{
+    border: 2px solid rgba(0, 0, 0, 0.658);
+    width: 625px;
+    padding: 16px;
+    background-color: black;
+}
+
 .top{
     
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 600px;
+    height: 50px;
     padding: 10px;
     border-radius: 10px;
-    border: 2px solid rgba(0, 0, 0, 0.658);
+    border: 2px solid rgba(39, 39, 39, 0.658);
+    background-color: black;
 
-    font: 16px  "Helvetica Neue", "Helvetica";
+    font: 16px "Helvetica Neue", "Helvetica" ;
+    font-weight: bolder;
+    
+p{
+    color: white;
+}
+
 }
 
 .body{
+    border: 2px solid rgba(0, 0, 0, 0.658);
+    width: 600px;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+    background-color: black;
     display: flex;
     justify-content: space-between;
-    padding: 10px;
-    width: 600px;
 }
+
 
 .btnBody{
     height: 50px;
-    border-radius: 10px;
+    border-radius: 15px;
     border: 2px solid black;
-    font: 16px  "Helvetica Neue", "Helvetica";
+    background-color: #5438DC;
+    color: white;
+    font-weight: bolder;
+    font-size: 16px
+}
+
+p{
+    color: white;
+    font: 16px "Helvetica Neue", "Helvetica";
+    font-weight: bolder;
+}
+
+.inpLog{
+    display: flex;
+
+    height: 50px;
+    width: 700px;
+    padding: 10px;
+
+    background-color: rgb(3, 1, 32);
+
+    border-bottom-left-radius: 10px; 
+    border-bottom-right-radius: 10px;
+}
+
+#User, #Senha{
+    border: 0px;
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: center;
+
+    margin-top: 10px;
+    margin-left: 10px;
+
+    height: 30px;
+    width: 300px;
+
+    font-family: 16px "Helvetica Neue", "Helvetica";
+    font-weight: bold; 
+    
+    
+}
+
+#botaoStart{
+    border: 1px;
+    border-radius: 10px;
+    margin-left: 10px;
+
+    height: 30px;
+
+    display: flex;
+    align-self: center;
+}
+
+.topLog{
+    background-color: rgb(3, 1, 32);
+    font-family: "Helvetica Neue", "Helvetica";
+    font-weight: bolder;
+    
+    color: white;
+    padding: 10px;
+    padding-bottom: 15px;
+
+    margin-top: 0;
+    margin-bottom: 0px;
+
+    height: 30px;
+    width: 700px;
+    
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }

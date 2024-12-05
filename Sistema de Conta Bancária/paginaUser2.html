@@ -4,8 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>PAGINA USUARIO LUIS</h1>
+    <script src="./js/pageUser1.js"></script>
+    <script src="./js/pageLogin.js"></script>
+    <div class="boxPai">
+        <div class="top">
+            <h3 class="txt"><p class="nome">Luis</p></h3>
+
+            <h4 class="txt"><p class="saldo">Saldo: 0</p></h4>
+        </div>
+
+        <div class="body">
+                
+                <input type="button" value="depositar" class="btnBody" onclick="depositar()">
+                <input type="button" value="sacar" class="btnBody" onclick="sacar()">
+                <input type="button" value="dados" class="btnBody" onclick="exibirDados()">
+     
+        </div>
+
+        <div class="footer">
+            <h3>
+                <p class="nomeFooter"></p>
+                <p class="saldoFooter"></p>
+                <p class="senhaFooter"></p>
+                <p class="tipoConta"></p>
+            </h3>
+        </div>
+
+        
+    </div>
+
 </body>
 </html>

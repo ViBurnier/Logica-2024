@@ -4,12 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <!-- login  -->
-    <input type="text" name="User" id="User" placeholder="Nome de Usuário" />
-    <input type="number" name="Senha" id="Senha" placeholder="Senha do Usuário"/>
-    <input type="button" value="entrar" onclick="start()" />
+
+    <h1 class="topLog">LOGIN</h1>
+
+    <div class="inpLog">
+      <input type="text" name="User" id="User" placeholder="Nome de Usuário" />
+      <input type="number" name="Senha" id="Senha" placeholder="Senha do Usuário"/>
+      <input type="button" value="entrar" id="botaoStart" />
+    </div>
+
+    <p class="mensagem"></p>
     
     <script src="js/pageLogin.js"></script>
   </body>
